@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using social_media_api.Data;
 
@@ -10,9 +11,11 @@ using social_media_api.Data;
 namespace social_media_api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DBContextModelSnapshot : ModelSnapshot
+    [Migration("20240826104550_user-entity-updated")]
+    partial class userentityupdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
